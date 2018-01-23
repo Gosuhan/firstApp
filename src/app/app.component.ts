@@ -8,12 +8,36 @@ import { Component, style } from '@angular/core';
 export class AppComponent {
   title = 'Promo La Poste 2';
   description = 'Bonjour, il fait beau !';
+
   user = {
     name: 'Patrick',
     age: '42',
     birthday: new Date('1976/01/02')
   };
+
+  users = [{
+    name: 'Patrick',
+    image: 'https://www.tuxboard.com/photos/2011/08/Emma-Watson-photo-visage-1000x1484.jpg',
+    age: '42',
+    birthday: new Date('1976/01/02')
+  },
+  {
+    name: 'Paul',
+    image: '',
+    age: '30',
+    birthday: new Date('1983/01/02')
+  },
+  {
+    name: 'Joe',
+    image: '',
+    age: '26',
+    birthday: new Date('1990/01/02')
+  }];
   colorClass = '';
+  colors = ['black', 'red', 'green', 'blue'];
+  testRecuperationInput = '';
+
+  selectedPerson = {name: '', image: '', age: '', birthday: ''};
 
   getDescription(): string {
     return this.description.toUpperCase();
@@ -37,6 +61,24 @@ export class AppComponent {
 
   colorChoice($event) {
     this.colorClass = $event.target.value;
+  }
+
+  testInput($event) {
+    console.log($event.target.value);
+    this.testRecuperationInput = $event.target.value;
+  }
+
+  testCheckbox($event) {
+    console.log($event.target.value);
+    console.log($event.target.checked);
+  }
+
+  afficherDetails(person) {
+    console.log(person.name);
+    this.selectedPerson.name = person.name;
+    this.selectedPerson.image = person.image;
+    this.selectedPerson.age = person.age;
+    this.selectedPerson.birthday = person.birthday;
   }
 }
 
