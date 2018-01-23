@@ -18,19 +18,19 @@ export class ExComponent1Component implements OnInit {
 
   users = [{
     name: 'Patrick',
-    image: 'https://www.tuxboard.com/photos/2011/08/Emma-Watson-photo-visage-1000x1484.jpg',
+    image: 'https://s3.amazonaws.com/uifaces/faces/twitter/malykhinv/128.jpg',
     age: '42',
     birthday: new Date('1976/01/02')
   },
   {
     name: 'Paul',
-    image: '',
+    image: 'https://s3.amazonaws.com/uifaces/faces/twitter/nessoila/128.jpg',
     age: '30',
     birthday: new Date('1983/01/02')
   },
   {
     name: 'Joe',
-    image: '',
+    image: 'https://s3.amazonaws.com/uifaces/faces/twitter/ernestsemerda/128.jpg',
     age: '26',
     birthday: new Date('1990/01/02')
   }];

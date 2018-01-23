@@ -1,0 +1,12 @@
+<h3>Test communication parent enfant</h3>
+
+<ul>
+    <app-user-item *ngFor="let person of users" (click)="afficherDetails(person)" [user]="person"></app-user-item>
+</ul>
+
+<em *ngIf="selectedPerson.name !==''">
+    <li>{{selectedPerson.name}}</li>
+    <li><img src ="{{selectedPerson.image}}"></li> <!--        ou <img [src]="selectedPerson.image">        -->
+    <li>{{selectedPerson.age}}</li>
+    <li>{{selectedPerson.birthday}}</li>
+</em>
